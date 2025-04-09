@@ -25,8 +25,6 @@ function createTabulator(id,url,columns,pagination,layout="fitColumns",tabulator
         };    
     }
 
-    console.log(tabulatorOptions);    
-
     if(layout=='fitDataTable'){
         $('#'+id).addClass('table-responsive');
     }
