@@ -13,6 +13,10 @@
     color:#fff;
 }
 
+#tabulator-table.red .tabulator-header {
+    background-color:#913434;
+}
+
 /*Allow column header names to wrap lines*/
 #tabulator-table .tabulator-header .tabulator-col,
 #tabulator-table .tabulator-header .tabulator-col-row-handle {
@@ -29,9 +33,12 @@
     font-size: 14px;
 }
 /*Color even rows*/
-    #tabulator-table .tabulator-tableholder .tabulator-table .tabulator-row:nth-child(even) {
+#tabulator-table .tabulator-tableholder .tabulator-table .tabulator-row:nth-child(even) {
         color:#000;
         background-color: #eaedff;
+}
+#tabulator-table.red .tabulator-tableholder .tabulator-table .tabulator-row:nth-child(even) {
+        background-color: #ffeaea;
 }
 #tabulator-table.tabulator .tabulator-footer {
     background: #fff;
