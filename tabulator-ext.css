@@ -1,0 +1,129 @@
+
+/*Theme the Tabulator element*/
+#tabulator-table{
+    background-color:#ccc;
+    border: 1px solid #333;
+}
+#tabulator-table .tabulator-page-counter{
+    
+}
+/*Theme the header*/
+#tabulator-table .tabulator-header {
+    background-color:#344291;
+    color:#fff;
+}
+
+/*Allow column header names to wrap lines*/
+#tabulator-table .tabulator-header .tabulator-col,
+#tabulator-table .tabulator-header .tabulator-col-row-handle {
+    white-space: normal;
+}
+
+/*Color the table rows*/
+#tabulator-table .tabulator-tableholder .tabulator-table .tabulator-row{
+   
+    background-color: #fff;
+    color: #000;
+}
+#tabulator-table.tabulator .tabulator-footer .tabulator-page{
+    font-size: 14px;
+}
+/*Color even rows*/
+    #tabulator-table .tabulator-tableholder .tabulator-table .tabulator-row:nth-child(even) {
+        color:#000;
+        background-color: #eaedff;
+}
+#tabulator-table.tabulator .tabulator-footer {
+    background: #fff;
+}
+#tabulator-table.tabulator .tabulator-footer .tabulator-page:disabled {
+    color: #000;
+}
+.tabulator .tabulator-footer {
+    border-top:none;
+}
+#tabulator-table.tabulator {
+    border: 1px solid #ced4da!important;
+}
+#tabulator-table .tabulator-row .tabulator-cell {
+    padding: .5em .5em;
+}
+#tabulator-table .wrap-text {
+    white-space: normal !important;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Area pagination start */
+@media (max-width: 1400px) and (min-width: 768px) {
+	.col-md-6 #tabulator-table .tabulator-page-counter {
+	  display: block;
+	  margin-bottom: 12px;
+	}
+	.col-md-6 .tabulator .tabulator-footer .tabulator-footer-contents {
+	  display: block;
+      padding: 2px;
+	}
+	
+
+  }
+  @media(max-width:840px){
+	.col-md-6 .tabulator .tabulator-footer {
+        padding: 4px 0!important;
+	}
+	.col-md-6 .tabulator .tabulator-footer .tabulator-page {
+		margin: 0 .04rem;
+	}
+	.col-md-6 .tabulator .tabulator-footer .tabulator-page-size {
+		padding: 4px 5px;
+	}
+    .col-md-12 .tabulator .tabulator-footer {
+        padding: 4px 0!important;
+	}
+  }
+  @media(max-width:768px){
+    .col-md-6 .tabulator .tabulator-footer .tabulator-footer-contents {
+        justify-content: start;
+        gap:12px;
+    }
+    .col-md-6 .tabulator .tabulator-footer .tabulator-pages {
+        display: none;
+    }
+  }
+
+ 
+ @media(max-width:575px){
+    .col-md-6 .tabulator .tabulator-footer .tabulator-footer-contents {
+        display: block;
+    }
+    .col-md-6 #tabulator-table .tabulator-page-counter {
+        display: block;
+    }
+    .col-md-12 .tabulator .tabulator-footer .tabulator-footer-contents {
+        display: block;
+    }
+    .col-md-12 #tabulator-table .tabulator-page-counter {
+        display: block;
+    }
+
+    .col-md-8 .tabulator .tabulator-footer .tabulator-footer-contents {
+        display: block;
+    }
+    .col-md-8 #tabulator-table .tabulator-page-counter {
+        display: block;
+    }
+    .col-md-7 .tabulator .tabulator-footer .tabulator-footer-contents {
+        display: block;
+    }
+    .col-md-7 #tabulator-table .tabulator-page-counter {
+        display: block;
+    }
+ 
+   .col-12 #tabulator-table .tabulator-page-counter {
+    display: block;
+   }
+   .col-12 .tabulator .tabulator-footer .tabulator-footer-contents {
+    display: block;
+   }
+ }
+/* Area pagination end */
