@@ -61,7 +61,7 @@ function createTabulator(id,url,columns,pagination,layout="fitColumns",tabulator
         paginationSizeSelector: pagination.sizes, // Dropdown for page size
         columns: columns,
         paginationCounter: function(pageSize, currentRow, currentPage, totalRows, totalPages) {
-            return `Showing ${currentRow}-${currentRow+pageSize-1} of ${totalRows}`;
+            return totalRows>0?`Showing ${currentRow}-${currentRow+pageSize-1} of ${totalRows}`:'';
         }
     }
     
