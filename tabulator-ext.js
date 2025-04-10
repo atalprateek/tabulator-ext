@@ -67,5 +67,21 @@ function createTabulator(id,url,columns,pagination,layout="fitColumns",tabulator
     
     var table = new Tabulator("#"+id, options);
     
+    function updateSerialNumbers() {
+        let rows = table.getRows(true); // true = only filtered rows
+        let pageSize = table.getPageSize();
+        let page = table.getPage() || 1;
+        
+        rows.forEach((row, index) => {
+            let serial = ((page - 1) * pageSize) + (index + 1);
+            row.update({ serial: serial });
+        });
+    }
+    
+    // Call this after table data is loaded or page is changed
+    table.on("dataProcessed", updateSerialNumbers);
+    table.on("pageLoaded", updateSerialNumbers);
+    table.on("dataFiltered", updateSerialNumbers);
+      
     return table;
 }
