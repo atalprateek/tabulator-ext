@@ -191,14 +191,27 @@
         }
     
         .search-box .search-icon {
+            width: 18px;
+            height: 18px;
+            border: 3px solid #999;
+            border-radius: 50%;
             position: absolute;
-            left: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 1rem;
-            color: #888;
-        }
-    
+            display: inline-block; 
+            box-sizing: border-box;
+            margin: 8px;
+          }
+      
+          .search-box .search-icon::before {
+            content: '';
+            width: 10px;
+            height: 3px;
+            background-color: #999;
+            position: absolute;
+            top: 11px;
+            left: 11px;
+            transform: rotate(45deg);
+            transform-origin: top left;
+          }
         .search-box .clear-btn {
             position: absolute;
             right: 5px;
