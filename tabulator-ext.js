@@ -45,7 +45,7 @@ function createTabulator(id,url,columns,pagination,layout="fitColumns",tabulator
     var searchRow=`<div class="row  search-wrapper">
                         <div class="col-md-4">
                             <div class=" search-box">
-                            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                            <i class="search-icon"></i>
                           
                                 <input type="text" class="form-control" id="searchInput" placeholder="Search...">
                                 <span class="input-group-append">
