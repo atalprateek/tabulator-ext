@@ -160,6 +160,65 @@
 }
 
 /* Area pagination start */
+/* search area start */
+        .search-wrapper {
+            margin: 20px 0;
+            display: flex
+    ;
+        justify-content: end;
+        }
+    
+        .search-box {
+            position: relative;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+    
+        .search-box input {
+            border: none;
+            border-radius: 30px;
+            padding: 10px 45px 10px 40px;
+            /* width: 100%; */
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+    
+        .search-box input:focus {
+            outline: none;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+        }
+    
+        .search-box .search-icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1rem;
+            color: #888;
+        }
+    
+        .search-box .clear-btn {
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: none;
+            background: #dc3545;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+    
+        .search-box .clear-btn:hover {
+            background: #c82333;
+        }
+/* Search End  */
+/* Area pagination start */
 @media (max-width: 1400px) and (min-width: 768px) {
 	.col-md-6 #tabulator-table .tabulator-page-counter {
 	  display: block;
