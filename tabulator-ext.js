@@ -1,3 +1,4 @@
+
 // JavaScript Document
 function createTabulator(id,url,columns,pagination,layout="fitColumns",tabulatorOptions={},searchOptions={}){
     if(pagination==undefined){
@@ -41,12 +42,14 @@ function createTabulator(id,url,columns,pagination,layout="fitColumns",tabulator
                 }
             };
     }
-    var searchRow=`<div class="row my-1">
+    var searchRow=`<div class="row  search-wrapper">
                         <div class="col-md-4">
-                            <div class="input-group input-group-sm">
+                            <div class="input-group input-group-sm search-box">
+                            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                          
                                 <input type="text" class="form-control" id="searchInput" placeholder="Search...">
                                 <span class="input-group-append">
-                                    <button type="button" class="btn btn-info btn-flat btn-danger" id="clearSearch">Clear</button>
+                                    <button type="button" class="btn btn-info btn-flat clear-btn" id="clearSearch">Clear</button>
                                 </span>
                             </div>
                         </div>
