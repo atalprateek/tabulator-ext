@@ -80,11 +80,13 @@ function createTabulator(id,url,columns,pagination,layout="fitColumns",tabulator
             row.update({ serial: serial });
         });
     }
-    
-    // Call this after table data is loaded or page is changed
-    table.on("dataProcessed", updateSerialNumbers);
-    table.on("pageLoaded", updateSerialNumbers);
-    table.on("dataFiltered", updateSerialNumbers);
-      
+
+    if(columns[0].field=='serial' && columns[0].type=='auto'){
+        // Call this after table data is loaded or page is changed
+        table.on("dataProcessed", updateSerialNumbers);
+        table.on("pageLoaded", updateSerialNumbers);
+        table.on("dataFiltered", updateSerialNumbers);
+    }
+
     return table;
 }
