@@ -1,6 +1,5 @@
-
 // JavaScript Document
-function createTabulator(id,url,columns,pagination,layout="fitColumns",tabulatorOptions={},searchOptions={}){
+function createTabulator(id,url,columns,pagination,layout="fitColumns",tabulatorOptions={},searchOptions={},exportOptions={}){
     if(pagination==undefined){
         pagination={
             type : "local",
@@ -42,7 +41,18 @@ function createTabulator(id,url,columns,pagination,layout="fitColumns",tabulator
                 }
             };
     }
+    var exportBtns='';
+    if(exportOptions.export===true){
+        exportBtns=`<div class="btn-group me-2 my-1" role="group" aria-label="First group"> 
+                        <button type="button" class="btn btn-primary" onClick="downloadCSV()">CSV</button> 
+                        <button type="button" class="btn btn-primary" onClick="downloadExcel()">Excel</button> 
+                        <button type="button" class="btn btn-primary" onClick="downloadPDF()">PDF</button> 
+                    </div>`;
+    }
     var searchRow=`<div class="row  search-wrapper">
+                        <div class="col-md-4">
+                            ${exportBtns}
+                        </div>
                         <div class="col-md-4">
                             <div class=" search-box">
                             <i class="search-icon"></i>
