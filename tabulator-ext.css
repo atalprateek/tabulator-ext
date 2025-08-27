@@ -158,7 +158,12 @@
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
-
+/* No Border */
+#tabulator-table.no-border,
+#tabulator-table.no-border .tabulator-row .tabulator-cell{
+    border: 0;
+}
+/* No Border */
 /* Area pagination start */
 /* search area start */
         .search-wrapper {

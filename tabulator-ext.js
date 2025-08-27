@@ -42,12 +42,18 @@ function createTabulator(id,url,columns,pagination,layout="fitColumns",tabulator
             };
     }
     var exportBtns='';
-    if(exportOptions.export===true){
-        exportBtns=`<div class="btn-group me-2 my-1" role="group" aria-label="First group"> 
-                        <button type="button" class="btn btn-primary" onClick="downloadCSV()">CSV</button> 
-                        <button type="button" class="btn btn-primary" onClick="downloadExcel()">Excel</button> 
-                        <button type="button" class="btn btn-primary" onClick="downloadPDF()">PDF</button> 
-                    </div>`;
+    if (exportOptions.export===true || Array.isArray(exportOptions.export)){
+        exportBtns='<div class="btn-group me-2 my-1 export-btn-group" role="group" aria-label="First group">';
+        if(exportOptions.export===true || exportOptions.export.indexOf('csv')!=-1){
+            exportBtns+='<button type="button" class="btn btn-primary export-btn" onClick="downloadCSV()">CSV</button>';
+        }
+        if(exportOptions.export===true || exportOptions.export.indexOf('excel')!=-1){
+            exportBtns+='<button type="button" class="btn btn-primary export-btn" onClick="downloadExcel()">Excel</button>';
+        }
+        if(exportOptions.export===true || exportOptions.export.indexOf('pdf')!=-1){
+            exportBtns+='<button type="button" class="btn btn-primary export-btn" onClick="downloadPDF()">PDF</button>';
+        }
+        exportBtns+='</div>';
     }
     var searchRow=`<div class="row  search-wrapper">
                         <div class="col-md-4">
